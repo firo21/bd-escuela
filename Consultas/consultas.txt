@@ -1,0 +1,12 @@
+SELECT TIMESTAMPDIFF(MINUTE,hora_inicio,hora_fin) AS minutos FROM computadora_asignada;
+SELECT TIMESTAMPDIFF(HOUR,hora_inicio,hora_fin) AS horas FROM computadora_asignada;
+SELECT TIMESTAMPDIFF(hour,hora_inicio,hora_fin) AS horas FROM computadora_asignada WHERE identificador_sesion="1688553425";
+
+//Selecciona la computadora que más ha sido usada
+SELECT MAX(TIMESTAMPDIFF(HOUR,hora_inicio,hora_fin)) AS horas FROM computadora_asignada;
+
+//Seleccionar las horas que las computadoras han sido usada durante el año 2020
+SELECT TIMESTAMPDIFF(hour,hora_inicio,hora_fin) AS horas FROM computadora_asignada WHERE YEAR(fecha)=2020;
+
+//Suma todas las horas en las cuales las computadoras han sido asignadas en el 2020
+SELECT SUM(TIMESTAMPDIFF(hour,hora_inicio,hora_fin)) AS horas FROM computadora_asignada WHERE YEAR(fecha)=2020;

@@ -1,0 +1,28 @@
+INSERT INTO tipo_usuario(tipo,usuario) VALUES(1,"Estudiante");
+INSERT INTO tipo_usuario(tipo,usuario) VALUES(2,"Profesor");
+INSERT INTO tipo_usuario(tipo,usuario) VALUES(3,"Administrativo");
+
+INSERT INTO usuario(no_cuenta,nombre,tipo,ubicacion,correo) VALUES(1576543789,"Peter Parker",1,"Culver City, California","peter@sony.com");
+INSERT INTO usuario(no_cuenta,nombre,tipo,ubicacion,correo) VALUES(1688553425,"Anthony Stark",2,"Walt Disney Studios de Burbank, California","tony@marvel.com");
+INSERT INTO usuario(no_cuenta,nombre,tipo,ubicacion,correo) VALUES(1744245678,"Joe Russo",3,"Walt Disney Studios de Burbank, California","joe.ru@marvel.com");
+
+INSERT INTO tema_pagina(tema,descripcion) VALUES(1,"Finanzas");
+INSERT INTO tema_pagina(tema,descripcion) VALUES(2,"Estadistica");
+INSERT INTO tema_pagina(tema,descripcion) VALUES(3,"Calculo");
+INSERT INTO tema_pagina(tema,descripcion) VALUES(4,"Algebra");
+INSERT INTO tema_pagina(tema,descripcion) VALUES(5,"Analisis de Fourier");
+INSERT INTO tema_pagina(tema,descripcion) VALUES(6,"Entretenimiento");
+
+INSERT INTO pagina_web(id,url,ip_pagina,hora_inicio,hora_fin,tema) VALUES (NULL,"https://misfinanzas.com.mx/","192.168.0.17","10:15:34","12:40:56",1);
+INSERT INTO pagina_web(id,url,ip_pagina,hora_inicio,hora_fin,tema) VALUES(NULL,"https://calculo-desde-cero.com/","165.45.68.12","18:54:34","23:21:04",3);
+INSERT INTO pagina_web(id,url,ip_pagina,hora_inicio,hora_fin,tema) VALUES(NULL,"https://estadisticas-para-todos.com/","175.35.248.10","16:54:34","24:22:04",2);
+INSERT INTO pagina_web(id,url,ip_pagina,hora_inicio,hora_fin,tema) VALUES(NULL,"https://analisis-avanzado-f.com/","200.85.218.45","03:54:35","06:34:44",5);
+
+INSERT INTO computadora(ip,nombre) VALUES("192.168.0.10","C-001");
+INSERT INTO computadora(ip,nombre) VALUES("192.168.0.12","C-002");
+INSERT INTO computadora(ip,nombre) VALUES("192.168.0.14","C-003");
+
+INSERT INTO computadora_asignada(id,ip,identificador_sesion,url,hora_inicio,hora_fin,fecha) VALUES(NULL,"192.168.0.10",1576543789,"https://misfinanzas.com.mx/","10:05:14","22:32:16","2020-07-09");
+INSERT INTO computadora_asignada(id,ip,identificador_sesion,url,hora_inicio,hora_fin,fecha) VALUES(NULL,"192.168.0.14",1576543789,"https://calculo-desde-cero.com/","08:25:54","12:02:11","2020-09-06");
+INSERT INTO computadora_asignada(id,ip,identificador_sesion,url,hora_inicio,hora_fin,fecha) VALUES(NULL,"192.168.0.12",1688553425,"https://estadisticas-para-todos.com/","10:05:14","13:32:16","2021-02-09");
+INSERT INTO computadora_asignada(id,ip,identificador_sesion,url,hora_inicio,hora_fin,fecha) VALUES(NULL,"192.168.0.14",1744245678,"https://analisis-avanzado-f.com","00:18:18","04:02:14","2019-09-06");

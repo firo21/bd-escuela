@@ -1,0 +1,2 @@
+//Vista que me muestra la cantidad en segundos que se ha conectado un cliente y asignamos un apodo "segundos" al atributo de segundos
+CREATE VIEW tiempo_asignado_usuario_vw AS SELECT identificador_sesion, TIMESTAMPDIFF(SECOND,hora_inicio,hora_fin) AS segundos FROM computadora_asignada;
